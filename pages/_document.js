@@ -1,7 +1,7 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import Image from "next/image";
 import { FB_PIXEL_ID_1, FB_PIXEL_ID_2 } from "../lib/fPixel";
-import Script from "next/script";
+// import Script from "next/script";
 
 export default class MyDocument extends Document {
   render() {
@@ -37,7 +37,7 @@ export default class MyDocument extends Document {
             })(window, document, "script", "dataLayer", "GTM-TRXLDVG")}
             ;
           </script> */}
-          <Script
+          {/* <Script
             id="tag-manager"
             strategy="afterInteractive"
             dangerouslySetInnerHTML={{
@@ -49,7 +49,7 @@ export default class MyDocument extends Document {
               })(window,document,'script','dataLayer','GTM-TRXLDVG');
           `,
             }}
-          />
+          /> */}
         </Head>
         <body>
           <noscript>
