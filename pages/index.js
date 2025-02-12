@@ -1,36 +1,23 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import { useEffect } from "react";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   useEffect(() => {
     if ("OTPCredential" in window) {
-      window.addEventListener("DOMContentLoaded", (e) => {
-        const input = document.querySelector(
-          'input[autocomplete="one-time-code"]'
-        );
-        if (!input) return;
-        const ac = new AbortController();
-        const form = input.closest("form");
-        if (form) {
-          form.addEventListener("submit", (e) => {
-            ac.abort();
-          });
-        }
-        navigator.credentials
-          .get({
-            otp: { transport: ["sms"] },
-            signal: ac.signal,
-          })
-          .then((otp) => {
-            // input.value = otp.code;
-            // if (form) form.submit();
-            alert(`Got OTP: ${otp?.code}`);
-          })
-          .catch((err) => {
-            console.log(err);
-          });
-      });
+      const ac = new AbortController();
+      const input = document.querySelector(
+        'input[autocomplete="one-time-code"]'
+      );
+      if (!input) return;
+
+      navigator.credentials
+        .get({ otp: { transport: ["sms"] }, signal: ac.signal })
+        .then((otp) => {
+          input.value = otp.code;
+          alert(`OTP: ${otp.code}`);
+        })
+        .catch((err) => console.log("OTP Error:", err));
     }
   }, []);
 
