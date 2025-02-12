@@ -1,6 +1,6 @@
-import { useEffect } from "react";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
@@ -23,9 +23,9 @@ export default function Home() {
             signal: ac.signal,
           })
           .then((otp) => {
-            // input.value = otp?.code;
+            // input.value = otp.code;
             // if (form) form.submit();
-            alert(`OTP: ${otp?.code}`);
+            alert(`Got OTP: ${otp?.code}`);
           })
           .catch((err) => {
             console.log(err);
@@ -45,7 +45,7 @@ export default function Home() {
       <main className={styles.main}>
         <div>
           <p>Enter OTP:</p>
-          <input type="text" autoComplete="one-time-code" inputMode="numeric" />
+          <input type="text" inputMode="numeric" autoComplete="one-time-code" />
         </div>
       </main>
     </div>
