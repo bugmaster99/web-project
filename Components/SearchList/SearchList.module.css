@@ -1,0 +1,145 @@
+.searchListCon {
+  position: relative;
+  width: 100%;
+}
+
+.selectedItem {
+  position: relative;
+  background: transparent;
+  /* padding-inline: 4px; */
+  /* padding-block: 5px; */
+  /* width: 296px; */
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #a1a1aa;
+  font-size: 12px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.searchListError {
+  border: 1px solid red;
+}
+
+.searchListInput {
+  font-weight: 300;
+  background: transparent;
+  padding: 11px 12px 11px 7px;
+  outline: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  z-index: 1;
+}
+
+.searchListInput::placeholder {
+  font: 12px;
+  font-weight: 300;
+}
+
+.optionsCon {
+  position: absolute;
+  top: 34px;
+  z-index: 1;
+  background: #fff;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 7px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 0;
+  /* padding-top: 20px; */
+  padding-block: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.option {
+  cursor: pointer;
+  color: #767676;
+  font-size: 12px;
+  text-align: left;
+  font-weight: 300;
+  padding-left: 6px;
+  padding-block: 5px;
+  border-radius: 7px;
+  transition: all 0.3s ease-in-out;
+}
+
+.option:hover,
+.option:active {
+  color: #fff;
+  background: #6895ee;
+}
+
+.notFound {
+  font-size: 12px;
+  font-weight: 300;
+  color: red;
+}
+
+@media screen and (min-width: 350px) {
+  .radioBtnPreText {
+    font-size: 130%;
+  }
+}
+
+@media screen and (min-width: 423px) {
+  .selectedItem,
+  .searchListInput,
+  .option {
+    font-size: 16.077px;
+  }
+
+  .searchListInput::placeholder {
+    font-size: 16.077px;
+  }
+}
+
+@media screen and (min-width: 572px) {
+  .selectedItem,
+  .searchListInput,
+  .option {
+    font-size: 16.077px;
+  }
+
+  .searchListInput::placeholder {
+    font-size: 16.077px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .selectedItem,
+  .searchListInput,
+  .option {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .searchListInput::placeholder {
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .optionsCon {
+    max-height: 200px;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .selectedItem {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}

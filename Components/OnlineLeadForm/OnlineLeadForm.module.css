@@ -1,0 +1,613 @@
+.leadFormCon {
+  background: var(--tertiary-background-color);
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  width: 100%;
+  font-size: 210%;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+  background: linear-gradient(90deg, #eb5758 32.16%, #598ced 53%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.75rem;
+  margin-top: var(--mb-0-5);
+}
+
+.description {
+  width: 95%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 120%;
+  line-height: 19px;
+  color: #7d7987;
+  margin: 0;
+  margin-bottom: var(--mb-0-5);
+  margin: 0 auto;
+}
+
+.formTitle {
+  text-align: center;
+  color: var(--secodary-font-color-alt);
+  font-size: 120%;
+}
+
+.leadForm {
+  text-align: center;
+}
+
+.formGroup {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobileFormControl.formControlError,
+.otpBtn.formControlError {
+  border: 1px solid red;
+  border-right: 0;
+}
+
+.otpBtn.formControlError {
+  border: 1px solid red;
+  border-left: 0;
+}
+
+.formControl.formControlError {
+  border: 1px solid red;
+}
+
+.otpFormControl.formControlError {
+  border: 1px solid red;
+}
+
+.formControl {
+  width: 91.5%;
+  padding: 0.7rem;
+  border-radius: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.9rem;
+  font-weight: 300;
+  background: none;
+  font-size: 120%;
+}
+
+/* .formControl:focus {
+  outline: none;
+} */
+
+.formControl::placeholder,
+.mobileFormControl::placeholder,
+.otpFormControl::placeholder {
+  text-transform: capitalize;
+  font-weight: 300;
+  font-size: 120%;
+  opacity: 0.8;
+}
+
+.mobileFormControl[disabled],
+.otpBtn[disabled] {
+  cursor: not-allowed;
+  user-select: none;
+  background: #e4e4e4;
+  opacity: 0.5;
+  width: 60%;
+}
+
+.otpBtn[disabled] {
+  width: unset;
+  background: var(--primary-background-color);
+  z-index: 2;
+}
+
+/* .otpBtn[disabled] {
+  
+} */
+
+.radioBtnBroup {
+  width: 90%;
+  justify-content: space-between;
+  margin: var(--mb-1) auto;
+  mix-blend-mode: var(--mb-1);
+}
+
+.radioBtnPreText {
+  /* width: 45%; */
+  font-size: 110%;
+  font-weight: 300;
+  text-align: left;
+}
+
+.options {
+  /* width: 55%; */
+  display: flex;
+  justify-content: flex-end;
+}
+
+.option {
+  position: relative;
+  width: 70px;
+  /* height: 50px; */
+
+  display: flex;
+  align-items: center;
+  /* margin-left: 1.5rem; */
+}
+
+.option input[type="radio"] {
+  display: none;
+}
+
+.option label {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 140%;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.option label::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 15px;
+  border: solid var(--tertiary-font-color);
+  top: 41%;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg) translateY(-50%);
+  z-index: 99;
+  opacity: 0;
+}
+
+.option .labelYes::before {
+  right: 26%;
+}
+
+.option .labelNo::before {
+  right: 31%;
+}
+
+.option label::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+
+  margin-left: 0.5rem;
+  margin-top: -0.5rem;
+  top: 5px;
+  border-radius: 3.5px;
+}
+
+.option .labelYes::after {
+  background: var(--primary-background-color);
+}
+
+.option .labelNo::after {
+  border: 2px solid rgba(0, 0, 0, 0.7);
+}
+
+.option input[type="radio"]:checked ~ label::before {
+  opacity: 1;
+}
+
+.option input[type="radio"]:checked ~ label::after {
+  background: var(--primary-background-color);
+  border: none;
+}
+
+.option input[type="radio"]:not(:checked) ~ label::after {
+  border: 2px solid rgba(0, 0, 0, 0.7);
+  background: var(--tertiary-background-color);
+}
+
+.submitBtn {
+  display: inline-flex;
+  margin: var(--mb-1) 0;
+  background: var(--primary-background-color);
+  color: var(--tertiary-font-color);
+  font-size: 120%;
+  padding: 1rem 0;
+  justify-content: center;
+  width: 90%;
+  font-weight: 700;
+}
+
+.mobileOtpFormGroup {
+  display: flex;
+  width: 91.5%;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.mobileNumberCon {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.inputBtnGp {
+  display: flex;
+  position: relative;
+}
+
+.mobileFormControl:focus {
+  outline: none;
+}
+
+.mobileFormControl {
+  flex: 1;
+  padding: 0.7rem;
+  border-radius: 7px;
+  border-top-right-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.9rem;
+  border-right: none;
+  border-bottom-right-radius: 0;
+  width: 60%;
+  font-size: 120%;
+  padding-right: 0;
+}
+
+.centres {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url(../../public/assets/images/downward-triangle.png);
+  background-size: 3%;
+  background-repeat: no-repeat;
+  background-position-x: 94%;
+  background-position-y: 50%;
+}
+
+.mobileFormControl.verifiedMobileNumber {
+  border: 2px solid #009429;
+  border-radius: 7px;
+}
+
+.verifiedCheckMark {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: #009429;
+  position: absolute;
+  top: 25%;
+  right: 3%;
+  transform: translateY(-30%);
+}
+
+.verifiedCheckMark::after {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 15px;
+  border: solid var(--tertiary-font-color);
+  top: 11px;
+  right: 15px;
+  border-width: 0 3px 3px 0;
+  transform: rotate(41deg) translateY(-50%);
+  z-index: 98;
+}
+
+.otpBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 120%;
+  color: var(--tertiary-font-color);
+  background: var(--primary-background-color);
+  border-radius: 7px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-bottom: 0.9rem;
+  border: 1px solid var(--primary-background-color);
+  padding: 0 0.5rem;
+  font-weight: 700;
+  /* margin-left: -0.4rem;
+  z-index: 1; */
+}
+
+.getOtpBtn {
+  width: 81.5px;
+}
+
+.resendOtpBtn {
+  width: 110.99px;
+}
+
+.otpCon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+}
+
+.otpFormControl {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem;
+  border-radius: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 0.9rem;
+  width: 100%;
+}
+
+.otpBtn.resend {
+  cursor: not-allowed;
+  opacity: 0.5;
+  font-size: 100%;
+}
+
+.otpError {
+  display: inline-flex;
+}
+
+.error,
+.msg {
+  display: inline-flex;
+  text-align: left;
+  width: 90%;
+  color: red;
+  font-size: 100%;
+  font-weight: 300;
+  position: absolute;
+  top: -13px;
+}
+
+.msg {
+  color: var(--secondary-font-color);
+}
+
+.pencilCon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pencilIco {
+  background: url(../../public/assets/images/pencil.png);
+  background-repeat: no-repeat;
+  height: 10px;
+  width: 10px;
+  margin-left: 0.3rem;
+}
+
+.pencilText {
+  color: var(--primary-font-color);
+}
+
+.pencilTextUnderline {
+  text-decoration: underline;
+}
+
+.chkMrkCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.successScrnChkMrk {
+  position: initial;
+  transform: scale(2);
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.typography {
+  color: var(--secondary-font-color);
+  font-size: 180%;
+  text-align: center;
+  line-height: 24.5px;
+}
+
+.typography1 {
+  font-weight: 300;
+  font-size: 150%;
+  color: #333333;
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: var(--mb-1);
+}
+
+.typography2 {
+  font-weight: 700;
+}
+
+.typography.typography2 {
+  width: 85%;
+  margin: auto;
+  margin-bottom: var(--mb-1-5);
+}
+
+.newFormDetailsBtn {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.8rem;
+  border-radius: 7px;
+  border: 1px solid var(--primary-background-color);
+  color: var(--primary-font-color);
+  background: var(--tertiary-background-color);
+  margin-bottom: var(--mb-1-5);
+  font-weight: 700;
+  font-size: 120%;
+}
+
+.loading {
+  border: 3px solid #e7e7e7;
+  border-top: 3px solid #1b4271;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: loading 2s linear infinite;
+  /* margin-bottom: 1rem; */
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 350px) {
+  .radioBtnPreText {
+    font-size: 130%;
+  }
+}
+
+@media screen and (min-width: 423px) {
+  .title {
+    font-size: 240.23%;
+    margin-top: var(--mb-1-5);
+  }
+
+  .description,
+  .formTitle,
+  .submitBtn,
+  .formControl,
+  .otpFormControl,
+  .mobileFormControl {
+    font-size: 160.77%;
+  }
+
+  .formControl::placeholder,
+  .otpFormControl::placeholder,
+  .mobileFormControl::placeholder {
+    font-size: 16.77px;
+  }
+
+  .description {
+    width: 90%;
+    font-size: 133.77%;
+  }
+
+  .radioBtnPreText {
+    font-size: 140.77%;
+  }
+
+  .option > label.labelYes::before {
+    right: 28%;
+  }
+
+  .labelNo::before {
+    right: 32%;
+  }
+}
+
+@media screen and (min-width: 572px) {
+  .mobileOtpFormGroup {
+    flex-direction: row;
+  }
+
+  .mobileNumberCon {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .otpCon {
+    width: 45%;
+    margin-left: 1rem;
+    flex-direction: column;
+  }
+
+  .otpError {
+    justify-content: flex-end;
+  }
+
+  .description {
+    font-size: 160.77%;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .formControl,
+  .mobileFormControl,
+  .otpFormControl,
+  .formControl::placeholder,
+  .mobileFormControl::placeholder,
+  .otpFormControl::placeholder,
+  .otpBtn,
+  .radioBtnPreText,
+  .submitBtn,
+  .newFormDetailsBtn {
+    font-size: 120%;
+  }
+
+  .otpBtn.resend {
+    font-size: 120%;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .leadFormCon {
+    padding-top: 1rem;
+    padding-inline: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .title,
+  .description,
+  .formTitle,
+  .submitBtn,
+  .newFormDetailsBtn {
+    font-size: 180%;
+  }
+
+  .description {
+    font-size: 160%;
+  }
+
+  .formControl,
+  .mobileFormControl,
+  .formControl::placeholder,
+  .mobileFormControl::placeholder,
+  .otpFormControl::placeholder,
+  .otpBtn,
+  .radioBtnPreText,
+  .option .labelYes,
+  .option .labelNo {
+    font-size: 16px;
+  }
+
+  .option > label.labelYes::before {
+    top: 30%;
+    right: 24%;
+  }
+
+  .option .labelNo::before {
+    top: 30%;
+    right: 28%;
+  }
+
+  .title {
+    font-size: 260%;
+    margin-top: var(--mb-0-5);
+  }
+
+  .otpFormControl {
+    padding: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .description {
+    margin-bottom: var(--mb-1);
+  }
+}

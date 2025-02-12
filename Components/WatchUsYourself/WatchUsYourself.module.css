@@ -1,0 +1,51 @@
+.watchUsYourself {
+  padding: 3rem 1%;
+  position: relative;
+}
+
+.title {
+  font-size: 250%;
+  font-weight: 700;
+  text-align: center;
+  color: var(--secondary-font-color);
+  margin-top: 0;
+  margin-bottom: var(--mb-2);
+}
+
+.watchUsYourselfSwiper {
+  padding-bottom: 25px;
+}
+
+.myIframe {
+  border-radius: 10px;
+  overflow: hidden;
+  /* pointer-events: none; */
+}
+
+@media screen and (min-width: 423px) {
+  .title {
+    font-size: 300%;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .watchUsYourself {
+    padding-bottom: 0;
+  }
+
+  .watchUsYourselfSwiper {
+    padding-bottom: var(--mb-2-5);
+    margin-bottom: var(--mb-3);
+  }
+
+  .title {
+    font-size: 360%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .title {
+    font-size: 480%;
+    margin-bottom: var(--mb-3);
+  }
+}

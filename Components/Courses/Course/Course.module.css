@@ -1,0 +1,182 @@
+.course {
+  border-radius: 22px;
+  box-shadow: 0px 0px 2.93727px rgba(0, 0, 0, 0.25);
+  padding: 1rem 0;
+  background: var(--tertiary-background-color);
+  cursor: pointer;
+
+  /* min-height: 600px; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.imageCon {
+  padding: 0 1rem;
+  padding-bottom: 0;
+}
+
+.title {
+  color: var(--secondary-font-color);
+  font-weight: 600;
+  /* font-size: 22px; */
+  font-size: 16px;
+  text-align: left;
+  padding: 0 1rem;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.description {
+  padding: 0 1rem;
+  padding-left: 3rem;
+  padding-bottom: 0;
+  text-align: left;
+  /* font-size: 14px; */
+  color: var(--secondary-font-color);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 21.5px;
+  position: relative;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.description::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: var(--secondary-font-color);
+}
+
+.tags {
+  background: rgba(27, 66, 113, 0.1);
+  padding: 0.25rem;
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  margin: auto;
+  margin-bottom: 0.35rem;
+}
+
+.internshipAndPlacement {
+  display: flex;
+  max-width: 300px;
+  margin: auto;
+}
+
+.internshipAndPlacement > * {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tagText {
+  color: #1b4271;
+  margin-left: var(--mb-0-5);
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.bookDemo {
+  display: flex;
+  background: var(--primary-background-color);
+  color: var(--tertiary-font-color);
+  width: 100%;
+  font-weight: 700;
+  font-size: 13.22px;
+  line-height: 44.06px;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: var(--mb-1-5);
+  width: 90%;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 320px) {
+  .tagText {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 495px) {
+  .title {
+    /* display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden; */
+  }
+
+  /* .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  } */
+}
+
+@media screen and (min-width: 650px) {
+  .title {
+    /* display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 180%; */
+  }
+
+  /* .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 13px;
+  } */
+}
+
+@media screen and (min-width: 1240px) {
+  .title {
+    font-size: 200%;
+  }
+
+  .description {
+    font-size: 140%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .title {
+    font-size: 200%;
+  }
+
+  .course {
+    padding: 1.5rem 0;
+  }
+
+  .imageCon,
+  .title,
+  .description {
+    padding: 0 1.5rem;
+    padding-right: 1.1rem;
+  }
+
+  .description {
+    padding-left: 3rem;
+  }
+
+  .bookDemo {
+    padding: 0.5rem;
+    font-size: 18px;
+  }
+}

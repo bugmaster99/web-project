@@ -1,0 +1,214 @@
+.journey {
+  padding: 2.5rem 0;
+  background: rgba(86, 163, 255, 0.12);
+}
+
+.title {
+  font-size: 250%;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--secondary-font-color);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: var(--mb-3-5);
+}
+
+.stripCon,
+.learnings {
+  display: none;
+}
+
+.imgCon {
+  position: relative;
+  padding: 0 10%;
+  border-radius: 120px;
+}
+
+/* .mainImg {
+  border-radius: 80px;
+} */
+
+.stripTextMob {
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  color: var(--tertiary-font-color);
+  font-weight: 700;
+  font-size: 170.5%;
+  line-height: 60.72px;
+  text-align: center;
+}
+
+.learningMob {
+  width: 90%;
+  font-size: 150.18%;
+  line-height: 20.06px;
+  font-weight: 500;
+  text-align: center;
+  margin-block: var(--mb-2-5);
+  margin-inline: auto;
+  color: var(--secondary-font-color);
+}
+
+.stripes {
+  display: none;
+}
+
+.bookDemo {
+  background: var(--primary-background-color);
+  color: var(--tertiary-font-color);
+  border-radius: 10px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 19px;
+  font-size: 180%;
+  font-weight: 700;
+  width: 70%;
+  margin: 3.5rem auto;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 423px) {
+  .title {
+    font-size: 300%;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .learningMob {
+    font-size: 180.18%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .stripCon,
+  .learnings {
+    display: flex;
+  }
+
+  .stripTextMob,
+  .learningMob {
+    display: none;
+  }
+
+  .title {
+    font-size: 300%;
+    color: var(--secondary-font-color);
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .journey {
+    padding: 2.5rem;
+  }
+
+  .journeyCon {
+    display: flex;
+    justify-content: center;
+  }
+
+  .imgCon {
+    padding: 0 6%;
+    border-radius: initial;
+  }
+
+  /* .mainImg {
+    border-radius: initial;
+  } */
+
+  .learnings {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .learning {
+    width: 28.33333%;
+    text-align: center;
+    font-size: 120%;
+    line-height: 28.5px;
+    font-weight: 500;
+    margin: 0 auto;
+    color: var(--secondary-font-color);
+  }
+
+  .step {
+    width: 31.3333%;
+  }
+
+  .stripCon {
+    position: relative;
+    margin: 1rem 0;
+  }
+
+  .strip {
+    width: 100%;
+  }
+
+  .points {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  .stripText {
+    width: 33.3333%;
+    color: var(--tertiary-font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 200%;
+    font-weight: 700;
+    line-height: 56px;
+    text-align: center;
+  }
+
+  .bookDemo {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .stripText {
+    font-size: 220%;
+  }
+
+  .learning {
+    font-size: 150%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .journey {
+    padding: 4.5rem 6.1rem;
+    padding-bottom: 6.1rem;
+  }
+
+  .title {
+    font-size: 480%;
+    margin-bottom: 8rem;
+  }
+
+  .stripCon {
+    margin: 2.5rem auto;
+  }
+
+  .stripText {
+    font-size: 320%;
+  }
+
+  .learning {
+    font-size: 200%;
+  }
+
+  .bookDemo {
+    width: 28%;
+  }
+}

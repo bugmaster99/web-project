@@ -1,0 +1,32 @@
+.features {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+  padding-bottom: 0;
+  animation: sfb 1s cubic-bezier(0.25, 0.75, 0.5, 1);
+}
+
+@keyframes sfb {
+  0% {
+    transform: translateY(40%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .features {
+    width: 95%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .features {
+    width: 86%;
+    /* padding: 3.5rem 0; */
+  }
+}
