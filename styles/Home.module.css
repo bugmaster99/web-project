@@ -12,6 +12,12 @@
   align-items: center;
 }
 
+.formCon {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
 .footer {
   display: flex;
   flex: 1;
