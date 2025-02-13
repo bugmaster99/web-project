@@ -64,7 +64,7 @@ export default function Home() {
             onChange={onMobileChange}
             placeholder="Enter mobile number"
           />
-          {isOtpInputVisible && (
+          {true && (
             <>
               <p>Enter OTP:</p>
               <input
