@@ -45,7 +45,7 @@ export default function Home() {
         })
         .catch((err) => console.log("OTP Error:", err));
     }
-  }, []);
+  }, [isOtpInputVisible]);
 
   return (
     <div className={styles.container}>
@@ -64,7 +64,7 @@ export default function Home() {
             onChange={onMobileChange}
             placeholder="Enter mobile number"
           />
-          {true && (
+          {isOtpInputVisible && (
             <>
               <p>Enter OTP:</p>
               <input
